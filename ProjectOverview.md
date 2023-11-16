@@ -43,7 +43,7 @@ Within this phase, utilizing `boto3`, I facilitated the deployment of an Applica
 The primary objective of this code is to construct a Load Balancer and associate EC2 instances with the Target Group.
 Refer to the [LoadBalancing.py](https://github.com/sayanalokesh/DynamicWebApplication/blob/main/LoadBalancing.py) for the boto3 code snippet.
 
-Enclosed are the pertinent screenshots linked to the code.
+Enclosed are the relevant screenshots linked to the code.
 
 ### Auto Scaling Group (ASG) Configuration
 
@@ -58,7 +58,11 @@ Within this phase, I crafted a Lambda function to routinely examine the health s
 
 Refer to the [backup_lambda.py](https://github.com/sayanalokesh/DynamicWebApplication/blob/main/backup_lambda.py) for the boto3 code snippet.
 
-Enclosed are the pertinent screenshots related to the code.
+Enclosed are the  screenshots related to the code.
+
+The below screenshot shows the snapshots of unhealthy Instances.
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/a813c98c-e053-40b9-9078-4706cc27f109)
+
 
 ### S3 Logging & Monitoring
 
