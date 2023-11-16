@@ -63,6 +63,20 @@ Enclosed are the  screenshots related to the code.
 The below screenshot shows the snapshots of unhealthy Instances.
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/a813c98c-e053-40b9-9078-4706cc27f109)
 
+The instance is getting terminated after invoking the lambda code.
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/d93a5fb9-87dd-4407-b461-e4d941f0e179)
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/14ad5697-2e4f-41b3-8b6f-fa855c57aaaa)
+
+The below screenshot shows the unhealthy state of an Instance via email.
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/0bf0a580-4c00-48fa-8e05-51a4958ce5fb)
+
+The below screenshot shows the healthy state of an Instance via email.
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/7d5967af-d524-4f27-8d00-e04b08c41213)
+
+
+
+
+
 
 ### S3 Logging & Monitoring
 
