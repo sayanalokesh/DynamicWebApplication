@@ -41,6 +41,7 @@ Enclosed are the relevant screenshots related to the code.
 
 Within this phase, utilizing `boto3`, I facilitated the deployment of an Application Load Balancer (ALB) and the registration of EC2 instances with the ALB.
 The primary objective of this code is to construct a Load Balancer and associate EC2 instances with the Target Group.
+
 The functionality of the code is explained below.
     - The provided code utilizes the Boto3 library to interact with AWS services. It creates an Application Load Balancer (ALB), a target group, registers existing EC2 instances to this target group, sets up a listener for the ALB on port 80, and triggers another Python script (`asgConfiguration.py`) for autoscaling configuration.
 
