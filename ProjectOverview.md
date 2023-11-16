@@ -22,14 +22,14 @@
     - Screenshots related to the code
 
 5. **[S3 Logging & Monitoring](#s3-logging--monitoring)**
-    - Content related to S3 Logging & Monitoring (not provided in the given information)
+    - Content related to S3 Logging and monitoring (not provided in the given information)
 
 
     
 ### Web Application Deployment
 
 During this phase, specific tasks are executed elegantly:
-- Employing `boto3`, I orchestrated the launch of two EC2 instances (Frontend and Backend), configuring them as Nginx web servers. Subsequently, I deployed the web application onto these EC2 instances.
+- Using `boto3`, I launched two EC2 instances (Frontend and Backend), configuring them as Nginx web servers. Subsequently, I deployed the web application onto these EC2 instances.
 The code sequence involves instance launching, downloading Git dependencies, cloning files from the [repository](https://github.com/UnpredictablePrashant/TravelMemory.git)", navigating to TravelMemory, installing NodeJS and NPM, setting up reverse proxy, and executing the application on port 80.
 Kindly refer to the codes for launching instances:
     1. [boto3S3LaunchFE.py](https://github.com/sayanalokesh/DynamicWebApplication/blob/main/boto3S3LaunchFE.py)
