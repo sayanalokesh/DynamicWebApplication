@@ -40,25 +40,16 @@ Enclosed are the relevant screenshots related to the code.
 ### Load Balancing with ELB
 
 Within this phase, utilizing `boto3`, I facilitated the deployment of an Application Load Balancer (ALB) and the registration of EC2 instances with the ALB.
-The primary objective of this code is to construct a Load Balancer and associate EC2 instances with the Target Group.
-
-The functionality of the code is explained below.
-
-- The provided code utilizes the Boto3 library to interact with AWS services. It creates an Application Load Balancer (ALB), a target group, registers existing EC2 instances to this target group, sets up a listener for the ALB on port 80, and triggers another Python script (`asgConfiguration.py`) for autoscaling configuration.
+The primary objective of this code is to construct a Load Balancer and associate EC2 instances with the Target Group, set up a listener for the ALB on port 80, and trigger another Python script (`asgConfiguration.py`) for autoscaling configuration.
 
 Refer to the [LoadBalancing.py](https://github.com/sayanalokesh/DynamicWebApplication/blob/main/LoadBalancing.py) for the boto3 code snippet.
-
 
 Enclosed are the relevant screenshots linked to the code.
 
 ### Auto Scaling Group (ASG) Configuration
 
-In this phase, employing `boto3`, I created an ASG, utilizing the deployed EC2 instance as a template. Additionally, I configured scaling policies to dynamically scale in/out based on metrics such as CPU utilization or network traffic.
+In this phase, the code utilizes the Boto3 library to perform various tasks on AWS services. It identifies an EC2 instance named 'ajay-lokeshFE', creates an Amazon Machine Image (AMI) from it, extracts its configuration details, creates a Launch Template, and establishes an Auto Scaling Group (ASG) with scaling policies based on CPU utilization. Additionally, it assigns a Target Group and sets upscaling policies for the Auto Scaling Group to adjust capacity based on the average CPU utilization.
 Refer to the [asgConfiguration.py](https://github.com/sayanalokesh/DynamicWebApplication/blob/main/asgConfiguration.py) for the boto3 code snippet.
-
-The functionality of the code is explained below.
-
-- The code utilizes the Boto3 library to perform various tasks on AWS services. It identifies an EC2 instance named 'ajay-lokeshFE', creates an Amazon Machine Image (AMI) from it, extracts its configuration details, creates a Launch Template, and establishes an Auto Scaling Group (ASG) with scaling policies based on CPU utilization. Additionally, it assigns a Target Group and sets upscaling policies for the Auto Scaling Group to adjust capacity based on the average CPU utilization.
 
 Enclosed are the relevant screenshots tied to the code.
 
