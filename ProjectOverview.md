@@ -56,6 +56,10 @@ Enclosed are the relevant screenshots linked to the code.
 In this phase, employing `boto3`, I created an ASG, utilizing the deployed EC2 instance as a template. Additionally, I configured scaling policies to dynamically scale in/out based on metrics such as CPU utilization or network traffic.
 Refer to the [asgConfiguration.py](https://github.com/sayanalokesh/DynamicWebApplication/blob/main/asgConfiguration.py) for the boto3 code snippet.
 
+The functionality of the code is explained below.
+
+- The code utilizes the Boto3 library to perform various tasks on AWS services. It identifies an EC2 instance named 'ajay-lokeshFE', creates an Amazon Machine Image (AMI) from it, extracts its configuration details, creates a Launch Template, and establishes an Auto Scaling Group (ASG) with scaling policies based on CPU utilization. Additionally, it assigns a Target Group and sets upscaling policies for the Auto Scaling Group to adjust capacity based on the average CPU utilization.
+
 Enclosed are the relevant screenshots tied to the code.
 
 ### Lambda-based Health Checks & Management
