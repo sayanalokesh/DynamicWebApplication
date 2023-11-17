@@ -36,6 +36,15 @@ Kindly refer to the codes for launching instances:
     2. [boto3S3LaunchBE.py](https://github.com/sayanalokesh/DynamicWebApplication/blob/main/boto3InstanceBE.py)
 
 Enclosed are the relevant screenshots related to the code.
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/d4ae362c-a55c-447d-801c-fa8219f6f21c)
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/ef8e6210-7334-4819-93ac-511eea7dd92c)
+
+2 Instances have been created using the code.
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/df2dc753-4be8-45d9-801b-4a89830974fd)
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/ada6872e-6d3c-4d4e-bad3-c4cc81e4062e)
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/ec5afa52-7d74-4dfd-92f7-92b4fb9f616b)
+
+The code worked fine and successfully launched the application.
 
 ### Load Balancing with ELB
 
@@ -45,6 +54,17 @@ The primary objective of this code is to construct a Load Balancer and associate
 Refer to the [LoadBalancing.py](https://github.com/sayanalokesh/DynamicWebApplication/blob/main/LoadBalancing.py) for the boto3 code snippet.
 
 Enclosed are the relevant screenshots linked to the code.
+Load Balancer:
+
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/1fb8cd20-7c67-42e8-a904-4234f845810d)
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/50646d48-cda6-4ca2-bdff-4dbd7c9e0f21)
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/a34ea9df-f8a3-46d2-99f3-c883b2f69428)
+
+Target Groups
+
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/b92720e9-767f-48b9-ade2-5e0ce3bf8a9e)
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/a7b9b8e5-b5db-47bd-8eb3-56c0147e0e79)
+
 
 ### Auto Scaling Group (ASG) Configuration
 
@@ -52,6 +72,23 @@ In this phase, the code utilizes the Boto3 library to perform various tasks on A
 Refer to the [asgConfiguration.py](https://github.com/sayanalokesh/DynamicWebApplication/blob/main/asgConfiguration.py) for the boto3 code snippet.
 
 Enclosed are the relevant screenshots tied to the code.
+
+Launch Template with the same configuration as Frontend Instance.
+
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/d1218a24-63fe-4e39-8760-05bdbf8661c4)
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/79955e53-9237-4ee1-940c-b1c5a8a89053)
+
+AMI
+
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/6cac15a9-c446-4a5c-ac3c-3c8134b52ad8)
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/cd9f50b2-fd41-4fec-b290-d63745cdabc6)
+
+Auto Scaling Group
+
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/797e42ea-285e-40cd-a4ff-15f6d2f0e82e)
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/e0c4d83e-7d28-4f5e-8c16-0e0468ec0c11)
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/578ef47f-d576-4613-9e97-079edd1e09fc)
+
 
 ### Lambda-based Health Checks & Management
 
