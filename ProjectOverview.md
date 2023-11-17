@@ -32,14 +32,17 @@ During this phase, specific tasks are executed elegantly:
 - Using `boto3`, I launched two EC2 instances (Frontend and Backend), configuring them as Nginx web servers. Subsequently, I deployed the web application onto these EC2 instances.
 The code sequence involves instance launching, downloading Git dependencies, cloning files from the [repository](https://github.com/UnpredictablePrashant/TravelMemory.git)", navigating to TravelMemory, installing NodeJS and NPM, setting up reverse proxy, and executing the application on port 80.
 Kindly refer to the codes for launching instances:
+
     1. [boto3S3LaunchFE.py](https://github.com/sayanalokesh/DynamicWebApplication/blob/main/boto3S3LaunchFE.py)
     2. [boto3S3LaunchBE.py](https://github.com/sayanalokesh/DynamicWebApplication/blob/main/boto3InstanceBE.py)
 
 Enclosed are the relevant screenshots related to the code.
+
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/d4ae362c-a55c-447d-801c-fa8219f6f21c)
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/ef8e6210-7334-4819-93ac-511eea7dd92c)
 
 2 Instances have been created using the code.
+
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/df2dc753-4be8-45d9-801b-4a89830974fd)
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/ada6872e-6d3c-4d4e-bad3-c4cc81e4062e)
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/ec5afa52-7d74-4dfd-92f7-92b4fb9f616b)
@@ -112,6 +115,7 @@ Code Source has been attached using the same code
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/e9f562dd-71f3-4ea1-8c6f-788d9b6ae253)
 
 CloudWatch Logs
+
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/e793b447-7f8c-4b5b-a9ac-548b7652e53d)
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/b63f1ccf-4fd9-4a42-814f-b847f5248040)
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/f1e588ef-8e52-4eff-bc6c-ea5c774960ce)
@@ -123,13 +127,16 @@ The below screenshot shows the snapshots of unhealthy Instances for debugging pu
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/a813c98c-e053-40b9-9078-4706cc27f109)
 
 The instance is getting terminated after invoking the lambda code.
+
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/d93a5fb9-87dd-4407-b461-e4d941f0e179)
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/14ad5697-2e4f-41b3-8b6f-fa855c57aaaa)
 
 The below screenshot shows the unhealthy state of an Instance via email.
+
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/0bf0a580-4c00-48fa-8e05-51a4958ce5fb)
 
 The below screenshot shows the healthy state of an Instance via email.
+
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/7d5967af-d524-4f27-8d00-e04b08c41213)
 
 
