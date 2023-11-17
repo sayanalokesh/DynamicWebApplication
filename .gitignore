@@ -2,3 +2,5 @@
 IAM.json
 asgConfigurationnew.py
 gettingInstanceIdfromname.py
+S3LogsFromALB.json
+lambdaARN.py

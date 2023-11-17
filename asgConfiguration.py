@@ -1,5 +1,6 @@
 import boto3
 from datetime import datetime
+import subprocess
 
 # Inputs
 ec2_client = boto3.client('ec2', region_name='ap-south-1')
@@ -66,14 +67,6 @@ launch_template_name = 'Ajay-Lokesh-FE-Launch-Template'
 cpu_utilization_target = 50
 load_balancer_name = 'Ajay-Lokesh-load-balancer'
 
-# # Create a snapshot of the instance's volume
-# snapshot_response = ec2_client.create_snapshot(
-#     VolumeId=instance['BlockDeviceMappings'][0]['Ebs']['VolumeId'],
-#     Description=f'Snapshot for troubleshooting instance {instance_id}'
-# )
-
-# snapshot_id = snapshot_response['SnapshotId']
-
 # Create a Launch Template
 launch_template_name = 'Ajay-Lokesh-FE-Launch-Template'
 response = ec2_client.create_launch_template(
@@ -86,19 +79,6 @@ response = ec2_client.create_launch_template(
         'SecurityGroupIds': security_group_ids,
     }
 )
-
-
-# # Create Launch Template
-# response = ec2_client.create_launch_template(
-#     LaunchTemplateName=launch_template_name,
-#     VersionDescription='Initial version',
-#     LaunchTemplateData={
-#         'InstanceType': instance_type,
-#         'ImageId': ami_id,
-#         'KeyName': 'ubuntu_HVDevOps',
-#         'SecurityGroupIds': security_group_ids,
-#     }
-# )
 
 # assigining Target group name or ARN dynamic
 target_group_arn = 'Ajay-Lokesh-target-group'
@@ -142,3 +122,6 @@ response = autoscaling_client.put_scaling_policy(
         'TargetValue': cpu_utilization_target,
     }
 )
+
+# Run another Python script (boto3InstanceBE.py)
+subprocess.run(['python', 'Boto3ForLambdaUnhealthy.py'])
