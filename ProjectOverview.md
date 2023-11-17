@@ -101,7 +101,7 @@ Instance with the desired number
 
 Within this phase, I crafted a Lambda function to routinely examine the health status of the web application/Instances (Frontend) via the ALB. Should the health check consistently fail, the Lambda function captures a snapshot of the failing instance for debugging purposes. It then terminates the problematic instance, allowing the ASG to replace it. Additionally, the code sends a notification through SNS to administrators. The EventBridge will check every 10 minutes.
 
-Refer to the [backup_lambda.py](https://github.com/sayanalokesh/DynamicWebApplication/blob/main/backup_lambda.py) for the boto3 code snippet.
+Refer to the [Boto3ForLambdaUnhealthy.py](https://github.com/sayanalokesh/DynamicWebApplication/blob/main/Boto3ForLambdaUnhealthy.py) for the boto3 code snippet.
 
 Enclosed are the  screenshots related to the code.
 
