@@ -89,16 +89,37 @@ Auto Scaling Group
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/e0c4d83e-7d28-4f5e-8c16-0e0468ec0c11)
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/578ef47f-d576-4613-9e97-079edd1e09fc)
 
+Instance with the desired number
+
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/35c4838b-f60e-4266-9cee-e519f74fb5f1)
+
 
 ### Lambda-based Health Checks & Management
 
-Within this phase, I crafted a Lambda function to routinely examine the health status of the web application/Instances (Frontend) via the ALB. Should the health check consistently fail, the Lambda function captures a snapshot of the failing instance for debugging purposes. It then terminates the problematic instance, allowing the ASG to replace it. Additionally, the code sends a notification through SNS to administrators.
+Within this phase, I crafted a Lambda function to routinely examine the health status of the web application/Instances (Frontend) via the ALB. Should the health check consistently fail, the Lambda function captures a snapshot of the failing instance for debugging purposes. It then terminates the problematic instance, allowing the ASG to replace it. Additionally, the code sends a notification through SNS to administrators. The EventBridge will check every 10 minutes.
 
 Refer to the [backup_lambda.py](https://github.com/sayanalokesh/DynamicWebApplication/blob/main/backup_lambda.py) for the boto3 code snippet.
 
 Enclosed are the  screenshots related to the code.
 
-The below screenshot shows the snapshots of unhealthy Instances.
+A function has been created
+
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/3508fa03-0154-4097-a9ba-434b237dc35c)
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/4eb57499-14bb-44d8-8610-aa7cbb0eb37d)
+
+Code Source has been attached using the same code
+
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/e9f562dd-71f3-4ea1-8c6f-788d9b6ae253)
+
+CloudWatch Logs
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/e793b447-7f8c-4b5b-a9ac-548b7652e53d)
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/b63f1ccf-4fd9-4a42-814f-b847f5248040)
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/f1e588ef-8e52-4eff-bc6c-ea5c774960ce)
+![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/7d566e73-a080-4d5d-9592-e9ae6b67f69d)
+
+
+The below screenshot shows the snapshots of unhealthy Instances for debugging purposes.
+
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/a813c98c-e053-40b9-9078-4706cc27f109)
 
 The instance is getting terminated after invoking the lambda code.
@@ -110,10 +131,6 @@ The below screenshot shows the unhealthy state of an Instance via email.
 
 The below screenshot shows the healthy state of an Instance via email.
 ![image](https://github.com/sayanalokesh/DynamicWebApplication/assets/105637305/7d5967af-d524-4f27-8d00-e04b08c41213)
-
-
-
-
 
 
 ### S3 Logging & Monitoring
